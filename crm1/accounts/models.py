@@ -43,9 +43,7 @@ class Order(models.Model):
     date_created = models.DateTimeField(auto_now_add=True, null=True)
     status = models.CharField(max_length=200, null=True, blank=True, choices=STATUS)
    
-def createOrder(requset):
-
-    context = {}
-    return render(requset, 'accounts/order_form.html', context)    
+    def __str__(self):
+         return self.product.name   
 
     

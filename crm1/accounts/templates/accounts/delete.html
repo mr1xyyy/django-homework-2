@@ -2,14 +2,16 @@
 {% load static %}
 {% block content %}
 
+<br>
 <div class="row">
     <div class="col-md-6">
         <div class="card card-body">
-            <form action="" method="POST">
+            <h5>Are you sure you want to delete "{{ item }}"?</h5>
+
+            <form action="{% url 'delete_order' item.id %}" method="POST">
                 {% csrf_token %}
-                {{ form }}
                 <a class="btn btn-warning" href="{% url 'home' %}">Cancel</a>
-                <input class="btn btn-primary" type="submit" name="Submit" value="Submit">
+                <input class="btn btn-danger" type="submit" name="Confirm" value="Confirm">
             </form>
         </div>
     </div>
