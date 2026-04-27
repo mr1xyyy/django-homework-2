@@ -13,3 +13,7 @@
         #orders-pending{
             background-color: #7cd1c0;
         }
+        .navbar-brand{
+            width: 200px;   
+            height: auto;
+        }
